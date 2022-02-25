@@ -7,17 +7,22 @@ import java.util.Stack;
  * @date 2020/11/18
  **/
 public class MinStack {
-    public Stack dataStack;
-    public Stack minStack;
+    public Stack<Integer> dataStack = new Stack<Integer>();
+    public Stack<Integer>  minStack = new Stack<Integer>();
 
     public void push(int i){
-
+        dataStack.push(i);
+        if (minStack.isEmpty()) {
+            minStack.push(i);
+        } else {
+            minStack.push(Math.min(i, minStack.peek()));
+        }
     }
     public int  pop(){
-        return 0;
+        minStack.pop();
+        return dataStack.pop();
     }
     public  int getMinValue(){
-
-        return 0;
+        return minStack.peek();
     }
 }

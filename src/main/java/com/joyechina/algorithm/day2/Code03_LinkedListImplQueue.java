@@ -6,5 +6,7 @@ package com.joyechina.algorithm.day2;
  * @date 2020/11/16
  **/
 public class Code03_LinkedListImplQueue {
+    public static void main(String[] args) {
 
+    }
 }

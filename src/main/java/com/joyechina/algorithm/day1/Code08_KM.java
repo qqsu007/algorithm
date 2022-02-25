@@ -3,7 +3,7 @@ package com.joyechina.algorithm.day1;
 import java.util.HashMap;
 
 /**
- * 一个数组中有一种数出现了K次，其他的数都出现了M次，M>1,K<M 要求，额外空间复杂度O(1),时间复杂度O(n)
+ * 一个数组中有一种数出现了K次，其他的数都出现了M次，M>1,K<M 要求，额外空间复杂度O(1),时间复杂度O(n) 找到出现K次的数
  * @author Administrator
  * @date 2020/11/18
  **/

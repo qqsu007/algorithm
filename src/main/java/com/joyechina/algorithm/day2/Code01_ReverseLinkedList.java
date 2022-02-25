@@ -9,7 +9,7 @@ import com.joyechina.algorithm.day2.vo.SingleNode;
  * @author Administrator
  * @date 2020/11/16
  **/
-public class Code01_ReversalLinkedList {
+public class Code01_ReverseLinkedList {
     /**
      * 单链表反转
      * 	  a    ->   b    ->  c  ->  null
@@ -17,13 +17,13 @@ public class Code01_ReversalLinkedList {
      * @param head
      * @return
      */
-    public static SingleNode reversalSingleLinkedList(SingleNode head){
+    public static SingleNode reverseSingleLinkedList(SingleNode head){
         SingleNode pre = null;
         SingleNode next = null;
         while (head!=null){
-            /**1.保存节点下一个节点环境*/
+            /**1.记录当前节点下一个节点环境*/
             next = head.getNext();
-            /**2.将节点下一个设置为上一个node*/
+            /**2.将当前节点下一个设置为上一个node*/
             head.setNext(pre);
             /**3.把上个节点设置成当前节点*/
             pre = head;
@@ -39,7 +39,7 @@ public class Code01_ReversalLinkedList {
      * @param head
      * @return
      */
-    public static DubboNode reversalDubboLinkedList(DubboNode head){
+    public static DubboNode reverseDubboLinkedList(DubboNode head){
         DubboNode pre = null;
         DubboNode next = null;
         while (head!=null){
@@ -60,7 +60,7 @@ public class Code01_ReversalLinkedList {
         SingleNode node3 = new SingleNode(3);
         SingleNode node2 = new SingleNode(2,node3);
         SingleNode node1 = new SingleNode(1,node2);
-        SingleNode node4 = reversalSingleLinkedList(node1);
+        SingleNode node4 = reverseSingleLinkedList(node1);
         System.out.println(node4);
     }
 

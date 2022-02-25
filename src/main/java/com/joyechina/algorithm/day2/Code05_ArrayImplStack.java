@@ -5,5 +5,5 @@ package com.joyechina.algorithm.day2;
  * @author Administrator
  * @date 2020/11/16
  **/
-public class Code06_ArrayImplStack {
+public class Code05_ArrayImplStack {
 }
