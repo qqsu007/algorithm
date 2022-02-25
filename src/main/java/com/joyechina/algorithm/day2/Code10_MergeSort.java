@@ -59,14 +59,24 @@ public class Code10_MergeSort {
      * @param arr
      */
     public static void MergeSortNoRecursive (int[] arr){
+
         if(arr==null ||arr.length< SortUtil.MIN_SIZE){
             return;
         }
-        int k = 1;
-        while(k<= arr.length){
-
-
-            k = k<<1;
+        int N = arr.length;
+        int step = 1;
+        while(step<= N){
+            int L = 0;
+            while (L<N){
+             int M = L+step-1;
+             if(M>=N){
+                 break;
+             }
+             int R = Math.min(M+step,N-1);
+             merge(arr,L,M,R);
+             L= R+1;
+            }
+            step <<=1;
         }
 
     }
@@ -80,7 +90,8 @@ public class Code10_MergeSort {
             int[] arr = SortUtil.createRandomArray(maxValue,maxSize);
             int[] arr1 = SortUtil.copyArray(arr);
             MergeSortRecursive(arr);
-            SortUtil.arrySort(arr1);
+            MergeSortNoRecursive(arr1);
+            // SortUtil.arrySort(arr1);
             if(!SortUtil.isEqual(arr,arr1)){
                 flag = false;
                 break;
