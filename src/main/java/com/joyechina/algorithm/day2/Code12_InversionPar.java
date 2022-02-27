@@ -6,4 +6,5 @@ package com.joyechina.algorithm.day2;
  * @date 2020/11/23
  **/
 public class Code12_InversionPar {
+    //TODO
 }
