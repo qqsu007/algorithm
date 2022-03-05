@@ -23,7 +23,8 @@ public class Code03_DutchNationalFlag {
      * @return
      */
     public static int[] dutchNationalFlag(int[] arr,int L,int R){
-        if (L > R) { // L...R L>R
+        // L...R L>R
+        if (L > R) {
             return new int[] { -1, -1 };
         }
         if (L == R) {
