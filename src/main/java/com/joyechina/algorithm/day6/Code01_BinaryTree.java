@@ -50,12 +50,12 @@ public class Code01_BinaryTree {
     }
     public static void binaryTreePre2(Node node){
         Stack<Node> stack = new Stack();
-        stack.add(node);
+        stack.push(node);
         while(!stack.empty()){
             node = stack.pop();
             System.out.println(node.value);
-            if(null !=node.right){stack.add(node.right);}
-            if(null !=node.left){stack.add(node.left);}
+            if(null !=node.right){stack.push(node.right);}
+            if(null !=node.left){stack.push(node.left);}
         }
     }
     /**
@@ -69,6 +69,7 @@ public class Code01_BinaryTree {
         System.out.println(node.value);
         binaryTreeIn1(node.right);
     }
+    
 
     /***
      * 后序 左右头
@@ -84,12 +85,12 @@ public class Code01_BinaryTree {
     public static void binaryTreePost2(Node node){
         Stack<Node> stack = new Stack();
         Stack<Node> stack2 = new Stack();
-        stack.add(node);
+        stack.push(node);
         while(!stack.empty()){
             node = stack.pop();
-            stack2.add(node);
-            if(null !=node.left){stack.add(node.left);}
-            if(null !=node.right){stack.add(node.right);}
+            stack2.push(node);
+            if(null !=node.left){stack.push(node.left);}
+            if(null !=node.right){stack.push(node.right);}
         }
         while (!stack2.empty()){
             System.out.println(stack2.pop().value);
